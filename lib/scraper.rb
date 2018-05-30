@@ -36,7 +36,7 @@ class Scraper
         students_profile[:youtube] = link
       end
       students_profile[:profile_quote] = profile.css("div.profile-quote").text
-      students_profile[:biography] = profile.css("div.description-holder").text
+      students_profile[:biography] = profile.css(".bio-block .description-holder p").text
   end
 
 end
