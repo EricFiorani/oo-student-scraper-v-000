@@ -31,8 +31,8 @@ class Scraper
         students_profile[:linkedin] = link
       when link.include?("github")
         students_profile[:github] = link
-      when link.include?("youtube")
-        students_profile[:youtube] = link
+      else
+        students_profile[:blog] = link
       end
       students_profile[:profile_quote] = profile.css("div.profile-quote").text
       students_profile[:bio] = profile.css(".bio-block .description-holder p").text
