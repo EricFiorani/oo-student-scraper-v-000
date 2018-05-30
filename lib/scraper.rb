@@ -13,6 +13,9 @@ class Scraper
         location = student.css('.student-location').text
         profile = "#{student.attr('href')}"
         students << {name: name, location: location, profile_url: profile}
+      end
+    end
+    students
   end
 
   def self.scrape_profile_page(profile_url)
