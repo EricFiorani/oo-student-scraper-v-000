@@ -38,5 +38,7 @@ class Scraper
       students_profile[:profile_quote] = profile.css("div.profile-quote").text
       students_profile[:biography] = profile.css(".bio-block .description-holder p").text
   end
+  students_profile
+end
 
 end
